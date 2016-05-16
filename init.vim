@@ -5,6 +5,10 @@ call plug#begin()
 Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-sensible'
 Plug 'freeo/vim-kalisi'
+Plug 'vim-airline/vim-airline'
+Plug 'sjl/badwolf'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'mhartington/oceanic-next'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -12,10 +16,16 @@ call plug#end()
 let g:vimwiki_list = [{'path':'~/shared/vimwiki'}]
 
 " set 256 colors
-set t_Co=256
-" in case t_Co alone doesn't work, add this as well:
-let &t_AB="\e[48;5;%dm"
-let &t_AF="\e[38;5;%dm"
-
 colorscheme kalisi
 set background=dark
+
+syntax enable
+
+set encoding=utf-8
+
+" Powerline setup
+set laststatus=2
+set termencoding=utf-8
+" set guifont=Ubuntu\ Mono
+let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts = 1
