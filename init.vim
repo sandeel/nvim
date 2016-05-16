@@ -29,3 +29,9 @@ set termencoding=utf-8
 " set guifont=Ubuntu\ Mono
 let g:Powerline_symbols = 'fancy'
 let g:airline_powerline_fonts = 1
+
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
