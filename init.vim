@@ -10,6 +10,11 @@ Plug 'sjl/badwolf'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mhartington/oceanic-next'
 
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+
 " Add plugins to &runtimepath
 call plug#end()
 
