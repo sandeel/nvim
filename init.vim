@@ -35,3 +35,10 @@ let g:airline_powerline_fonts = 1
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+" swp files and history
+set noswapfile
+set undofile
+set undodir=~/.vim/undo//
+set undolevels=1000         " How many undos
+set undoreload=10000  
