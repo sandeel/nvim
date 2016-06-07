@@ -92,3 +92,6 @@ set conceallevel=0
 
 set number
 set relativenumber
+
+" fix pasting
+set mouse=r
