@@ -3,7 +3,6 @@ call remote#host#RegisterPlugin('python3', '/home/ubuntu/.config/nvim/plugged/de
       \ {'sync': v:true, 'name': '_deoplete', 'type': 'function', 'opts': {}},
      \ ])
 
-
 " ruby plugins
 
 

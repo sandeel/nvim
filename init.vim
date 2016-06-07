@@ -24,6 +24,9 @@ call plug#end()
 let g:deoplete#enable_at_startup = 1
 
 let g:vimwiki_list = [{'path':'~/shared/vimwiki'}]
+let g:vimwiki_url_maxsave = 0
+
+setlocal foldmethod=syntax
 
 " set 256 colors
 colorscheme kalisi
