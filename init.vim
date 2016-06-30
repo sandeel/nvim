@@ -10,6 +10,7 @@ Plug 'sjl/badwolf'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mhartington/oceanic-next'
 Plug 'Shougo/neosnippet'
+Plug 'scrooloose/nerdtree'
 
 
 function! DoRemote(arg)
