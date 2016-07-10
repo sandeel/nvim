@@ -25,8 +25,6 @@ call plug#end()
 let g:vimwiki_list = [{'path':'~/shared/vimwiki'}]
 let g:vimwiki_url_maxsave = 0
 
-setlocal foldmethod=syntax
-
 " set 256 colors
 colorscheme kalisi
 set background=dark
@@ -92,3 +90,11 @@ set conceallevel=0
 
 " fix pasting
 set mouse=r
+
+" jk and kj -> Quit Insert mode (and autosave)
+inoremap jk <Esc><Esc>`^:w<Cr>
+inoremap kj <Esc><Esc>`^:w<Cr>
+cnoremap jk <C-c>
+cnoremap kj <C-c>
+" Autosave on CursorHold
+autocmd CursorHold * :w
