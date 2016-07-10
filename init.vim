@@ -10,20 +10,24 @@ Plug 'sjl/badwolf'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mhartington/oceanic-next'
 Plug 'Shougo/neosnippet'
+Plug 'scrooloose/nerdtree'
 
 
 function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
 
 " Add plugins to &runtimepath
 call plug#end()
+"
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
 
 let g:vimwiki_list = [{'path':'~/shared/vimwiki'}]
 let g:vimwiki_url_maxsave = 0
+
+"setlocal foldmethod=syntax
 
 " set 256 colors
 colorscheme kalisi
@@ -77,7 +81,6 @@ endif
 " Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/snippets'
 
-
 " formatting
 filetype plugin indent on
 " show existing tab with 4 spaces width
@@ -87,6 +90,9 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 set conceallevel=0
+
+set number
+set relativenumber
 
 " fix pasting
 set mouse=r
