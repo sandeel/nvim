@@ -24,7 +24,7 @@ call plug#end()
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
 
-let g:vimwiki_list = [{'path':'~/shared/vimwiki'}]
+let g:vimwiki_list = [{'path':'~/vimwiki'}]
 let g:vimwiki_url_maxsave = 0
 
 "setlocal foldmethod=syntax
